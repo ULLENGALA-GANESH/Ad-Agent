@@ -1,0 +1,535 @@
+{
+  "modality": "video",
+  "video_filename": "cctv_perimeter_breach.mp4",
+  "duration_seconds": 10.0,
+  "fps": 20.0,
+  "resolution": "640x360",
+  "total_frames_analyzed": 100,
+  "anomaly_threshold": 0.424,
+  "overall_severity": "CRITICAL",
+  "total_incidents_detected": 1,
+  "total_anomalous_duration": 0.5,
+  "timeline": [
+    {
+      "time": 0.0,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.2,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.4,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.5,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.6,
+      "score": 0.0843,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.8,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 0.9,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.0,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.2,
+      "score": 0.0571,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.4,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.5,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.6,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.8,
+      "score": 0.0578,
+      "is_anomaly": false
+    },
+    {
+      "time": 1.9,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.0,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.2,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.4,
+      "score": 0.0594,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.5,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.6,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.8,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 2.9,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.0,
+      "score": 0.0745,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.2,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.4,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 3.5,
+      "score": 0.98,
+      "is_anomaly": true
+    },
+    {
+      "time": 3.6,
+      "score": 0.9761,
+      "is_anomaly": true
+    },
+    {
+      "time": 3.7,
+      "score": 0.8744,
+      "is_anomaly": true
+    },
+    {
+      "time": 3.8,
+      "score": 0.8472,
+      "is_anomaly": true
+    },
+    {
+      "time": 3.9,
+      "score": 0.8219,
+      "is_anomaly": true
+    },
+    {
+      "time": 4.0,
+      "score": 0.3063,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.1,
+      "score": 0.2806,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.2,
+      "score": 0.4148,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.3,
+      "score": 0.2962,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.4,
+      "score": 0.2816,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.5,
+      "score": 0.291,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.6,
+      "score": 0.2603,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.7,
+      "score": 0.2675,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.8,
+      "score": 0.3755,
+      "is_anomaly": false
+    },
+    {
+      "time": 4.9,
+      "score": 0.2996,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.0,
+      "score": 0.3011,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.1,
+      "score": 0.2757,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.2,
+      "score": 0.2755,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.3,
+      "score": 0.268,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.4,
+      "score": 0.3839,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.5,
+      "score": 0.3104,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.6,
+      "score": 0.2765,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.7,
+      "score": 0.2646,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.8,
+      "score": 0.2587,
+      "is_anomaly": false
+    },
+    {
+      "time": 5.9,
+      "score": 0.2577,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.0,
+      "score": 0.3891,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.1,
+      "score": 0.2757,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.2,
+      "score": 0.2775,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.3,
+      "score": 0.2788,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.4,
+      "score": 0.2781,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.5,
+      "score": 0.295,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.6,
+      "score": 0.3808,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.7,
+      "score": 0.2905,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.8,
+      "score": 0.2814,
+      "is_anomaly": false
+    },
+    {
+      "time": 6.9,
+      "score": 0.2711,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.0,
+      "score": 0.2871,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.1,
+      "score": 0.2593,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.2,
+      "score": 0.3612,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.3,
+      "score": 0.2688,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.4,
+      "score": 0.2711,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.5,
+      "score": 0.2919,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.6,
+      "score": 0.0839,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.8,
+      "score": 0.0651,
+      "is_anomaly": false
+    },
+    {
+      "time": 7.9,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.0,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.2,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.4,
+      "score": 0.0601,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.5,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.6,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.8,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 8.9,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.0,
+      "score": 0.0731,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.1,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.2,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.3,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.4,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.5,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.6,
+      "score": 0.061,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.7,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.8,
+      "score": 0.02,
+      "is_anomaly": false
+    },
+    {
+      "time": 9.9,
+      "score": 0.02,
+      "is_anomaly": false
+    }
+  ],
+  "incidents": [
+    {
+      "id": "INC-01",
+      "start_time": 3.5,
+      "end_time": 4.0,
+      "duration_seconds": 0.5,
+      "peak_score": 0.98,
+      "severity": "CRITICAL",
+      "category": "Perimeter Breach / Velocity Anomaly",
+      "description": "Abnormal optical trajectory & intrusion detected (Peak 98.0%)",
+      "keyframe_filename": "keyframe_INC-01.jpg",
+      "keyframe_b64": "data:image/jpeg;base64,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"
+    }
+  ],
+  "metrics": {
+    "auroc": 0.962,
+    "auprc": 0.941,
+    "peak_anomaly_score": 0.98,
+    "average_motion_baseline": 0.1686,
+    "threat_level": "CRITICAL"
+  }
+}
