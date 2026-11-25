@@ -11,6 +11,7 @@ from utils.gemini_client import query_gemini
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from entity.code_quality import CodeQuality
 from config.config import Config
+from project_paths import research_script_env
 # os.environ['OPENAI_API_KEY'] = Config.OPENAI_API_KEY
 genai.configure(api_key=Config.GEMINI_API_KEY)
 
@@ -77,7 +78,7 @@ class AgentOptimizer:
             f.write(new_code)
 
         try:
-            result = subprocess.run(["python", path], capture_output=True, text=True, timeout=60)
+            result = subprocess.run([sys.executable, path], capture_output=True, text=True, timeout=60, env=research_script_env())
             output = result.stdout + result.stderr
             if result.returncode != 0:
                 output += f"\n[ERROR] Return code: {result.returncode}"

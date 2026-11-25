@@ -2,13 +2,14 @@
 import argparse
 import logging
 import os
-from pathlib import Path
 from threading import Event, Thread
+
+from project_paths import PROJECT_ROOT
 
 from .store import LEASE_SECONDS, LeaseLost, RunStore
 from .workflow import Investigation
 
-DEFAULT_DB = Path(__file__).resolve().parents[1] / "instance" / "investigations.sqlite3"
+DEFAULT_DB = PROJECT_ROOT / "instance" / "investigations.sqlite3"
 log = logging.getLogger(__name__)
 
 

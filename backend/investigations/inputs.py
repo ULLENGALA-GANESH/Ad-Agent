@@ -3,11 +3,11 @@ import csv
 import io
 import json
 from datetime import datetime, timezone
-from pathlib import Path
 
 import numpy as np
+from project_paths import PROJECT_ROOT
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "benchmarks"
+DATA_DIR = PROJECT_ROOT / "data" / "benchmarks"
 MAX_BYTES = 2_000_000
 MAX_ROWS = 10_000
 SOURCES = {item["id"]: item for item in json.loads((DATA_DIR / "sources.json").read_text())}

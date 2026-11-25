@@ -9,6 +9,7 @@ const { createInterface } = require("node:readline");
 const { chromium } = require("playwright-core");
 
 const root = path.resolve(__dirname, "../..");
+const backend = path.join(root, "backend");
 const venv = path.join(root, ".venv", process.platform === "win32" ? "Scripts/python.exe" : "bin/python");
 const python = process.env.PYTHON || (fs.existsSync(venv) ? venv : "python");
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "ad-agent-browser-"));
@@ -16,7 +17,7 @@ const researchStore = path.join(temp, "research.json");
 const env = {...process.env, AD_AGENT_DB:path.join(temp,"test.sqlite3"), AD_AGENT_WORKERS:"0", AD_AGENT_RESEARCH_STORE:researchStore};
 const children = [];
 function child(args) {
-  const p = spawn(python,args,{cwd:root,env,windowsHide:true,stdio:["ignore","pipe","inherit"]});
+  const p = spawn(python,args,{cwd:backend,env,windowsHide:true,stdio:["ignore","pipe","inherit"]});
   children.push(p);
   return p;
 }
@@ -68,7 +69,7 @@ async function main(){
     await record.selectOption({index:0});
     await page.getByRole("heading",{name:"Investigation evidence"}).waitFor();
     const save = process.argv.includes("--screenshots");
-    if(save) await page.screenshot({path:path.join(root,"docs","incident.png"),fullPage:true});
+    if(save) await page.screenshot({path:path.join(root,"docs","screenshots","incident.png"),fullPage:true});
     await page.getByRole("link",{name:"Inspect run",exact:true}).click();
     await page.getByRole("heading",{name:"Agent trace"}).waitFor();
     assert.equal(await page.locator(".stage-list .stage-completed").count(),7);
@@ -91,7 +92,7 @@ async function main(){
     await page.getByRole("heading",{name:"Run incidents"}).waitFor();
     await page.getByRole("link",{name:"Overview",exact:true}).click();
     await page.getByRole("link",{name:"sensor-demo.csv",exact:false}).first().waitFor();
-    if(save) await page.screenshot({path:path.join(root,"docs","overview.png"),fullPage:true});
+    if(save) await page.screenshot({path:path.join(root,"docs","screenshots","overview.png"),fullPage:true});
     await page.setViewportSize({width:390,height:844});
     await page.getByRole("button",{name:"Open menu"}).click();
     await page.getByRole("link",{name:"Benchmarks",exact:true}).click();

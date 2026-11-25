@@ -6,13 +6,13 @@ if not exist ".venv\Scripts\python.exe" (
 )
 ".venv\Scripts\python.exe" -c "import flask, flask_cors, sklearn, requests; from langgraph.graph import StateGraph" >nul 2>&1
 if errorlevel 1 (
-    ".venv\Scripts\python.exe" -m pip install -r requirements-console.txt || goto failed
+    ".venv\Scripts\python.exe" -m pip install -r backend\requirements-console.txt || goto failed
 )
-".venv\Scripts\python.exe" "new frontend\scripts\check_build.py"
+".venv\Scripts\python.exe" "frontend\scripts\check_build.py"
 if errorlevel 2 goto failed
 if errorlevel 1 (
     echo Building the updated Ad-Agent console...
-    pushd "new frontend"
+    pushd "frontend"
     if not exist "node_modules" (
         call npm ci --include=dev || goto failed
     ) else if not exist "node_modules\.bin\vite.cmd" (
@@ -21,7 +21,7 @@ if errorlevel 1 (
     call npm run build || goto failed
     popd
 )
-".venv\Scripts\python.exe" server.py --open
+".venv\Scripts\python.exe" backend\server.py --open
 if errorlevel 1 goto failed
 exit /b 0
 :failed

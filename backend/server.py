@@ -9,6 +9,8 @@ import traceback
 import webbrowser
 from datetime import datetime, timezone
 
+from project_paths import DATA_DIR, PROJECT_ROOT
+
 if hasattr(sys.stdout, "reconfigure"):
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -17,7 +19,7 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 # Ensure execution under project virtual environment (.venv) if available
-venv_py = os.path.abspath(os.path.join(os.path.dirname(__file__), ".venv", "Scripts", "python.exe"))
+venv_py = str(PROJECT_ROOT / ".venv" / "Scripts" / "python.exe")
 if __name__ == "__main__" and os.path.exists(venv_py) and os.path.abspath(sys.executable).lower() != venv_py.lower():
     if sys.argv and sys.argv[0].endswith(".py"):
         import subprocess
@@ -55,7 +57,7 @@ RESULTS = {}
 JOBS = {}
 FEEDBACK_STORE = []
 STATE_LOCK = threading.RLock()
-STORE_PATH = os.environ.get("AD_AGENT_RESEARCH_STORE", os.path.join("data", "jobs_store.json"))
+STORE_PATH = os.environ.get("AD_AGENT_RESEARCH_STORE", str(DATA_DIR / "jobs_store.json"))
 
 
 def utc_now():
@@ -247,13 +249,13 @@ def upload():
     if file.filename == "":
         return jsonify({"error": "No filename provided"}), 400
 
-    os.makedirs("data", exist_ok=True)
+    DATA_DIR.mkdir(exist_ok=True)
     original_name = secure_filename(file.filename)
     if not original_name:
         return jsonify({"error": "Invalid filename"}), 400
 
     filename = f"{uuid.uuid4().hex}_{original_name}"
-    path = os.path.abspath(os.path.join("data", filename))
+    path = str(DATA_DIR / filename)
     file.save(path)
 
     return jsonify({
@@ -546,7 +548,7 @@ def feedback():
 # Start Server
 # ============================================================
 
-DIST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "new frontend", "dist")
+DIST = PROJECT_ROOT / "frontend" / "dist"
 
 
 @app.before_request
@@ -573,7 +575,7 @@ def console_page(page=""):
     if page.startswith("api/"):
         abort(404)
     if not os.path.isfile(os.path.join(DIST, "index.html")):
-        return "Build the console with npm run build in new frontend, or use its Vite development server.", 503
+        return "Run npm run build in the frontend directory, or use its Vite development server.", 503
     return send_from_directory(DIST, "index.html")
 
 

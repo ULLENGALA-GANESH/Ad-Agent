@@ -178,7 +178,9 @@ cython_debug/
 
 
 # Ignore generated files
-/generated_scripts
+generated_scripts/
+/trained_model.pkl
+/backend/trained_model.pkl
 train_data_loader.py
 test_data_loader.py
 cache.json

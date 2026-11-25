@@ -6,6 +6,7 @@ from pygments import highlight
 from pygments.lexers import PythonLexer
 from pygments.formatters import TerminalFormatter
 from utils.gemini_client import query_gemini_quota_safe, query_gemini_with_retry
+from project_paths import research_script_env
 from langchain_core.prompts import PromptTemplate
 
 # ------------------------ Updated Test Prompt ------------------------
@@ -122,7 +123,7 @@ THINK STEP BY STEP:
             with open(script_path, "w", encoding="utf-8") as f:
                 f.write(cleaned_code)
 
-            res = subprocess.run([sys.executable, script_path], capture_output=True, text=True)
+            res = subprocess.run([sys.executable, script_path], capture_output=True, text=True, env=research_script_env())
             print("\n=== [Execution Output] ===")
             print(res.stdout)
             if res.stderr:

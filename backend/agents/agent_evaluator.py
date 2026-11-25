@@ -11,6 +11,7 @@ from pygments.lexers import PythonLexer
 from pygments.formatters import TerminalFormatter
 
 from entity.code_quality import CodeQuality
+from project_paths import research_script_env
 from utils.gemini_client import query_gemini_quota_safe  # your Gemini wrapper
 
 def print_python_code(code_str):
@@ -40,7 +41,7 @@ class AgentEvaluator:
                 f.write(cleaned_code)
 
             # Run the script
-            res = subprocess.run([sys.executable, path], capture_output=True, text=True)
+            res = subprocess.run([sys.executable, path], capture_output=True, text=True, env=research_script_env())
             print("\n=== Execution Output ===\n", res.stdout, res.stderr)
 
             if res.returncode == 0:

@@ -135,7 +135,8 @@ def crash(claim, stage, description):
 store.begin=crash
 execute(store,store.claim())
 """
-        child=subprocess.run([sys.executable,"-c",script,str(self.store.path)],timeout=90)
+        child=subprocess.run([sys.executable,"-c",script,str(self.store.path)],
+                             cwd=Path(__file__).resolve().parents[1],timeout=90)
         self.assertEqual(child.returncode,42)
         with self.store.connection(True) as db:
             old_owner=db.execute("SELECT owner FROM runs WHERE id=?",(rid,)).fetchone()[0]

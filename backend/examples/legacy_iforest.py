@@ -1,12 +1,15 @@
+"""Historical IForest example with synthetic fallbacks. Run investigations.benchmark for measured results."""
 import os
 import sys
+from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score, average_precision_score
 from sklearn.model_selection import train_test_split
-train_path = "C:/Users/admin/OneDrive/Desktop/New folder/project/Ad-Agent_rohan/data/99800495496144a9b09214c10e251701_yahoo_train.csv"
-test_path = "C:/Users/admin/OneDrive/Desktop/New folder/project/Ad-Agent_rohan/data/1af845a6a20f45b4bbf741f973f4049b_yahoo_test.csv"
+data_dir = Path(__file__).resolve().parents[2] / "data"
+train_path = data_dir / "yahoo_train.csv"
+test_path = data_dir / "yahoo_test.csv"
 def load_dataset(path):
     if not path or not os.path.exists(path):
         return None, None

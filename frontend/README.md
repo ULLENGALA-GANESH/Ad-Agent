@@ -4,7 +4,7 @@ React, TypeScript, and Vite power the local investigation console. The overview 
 
 ## Develop locally
 
-Start the backend with `python server.py` from the project root using the console environment. See the [project setup](../README.md). In a second terminal, run these commands from this frontend directory.
+Start the backend with `python backend/server.py` from the project root using the console environment. See the [project setup](../README.md). In a second terminal, run these commands from this frontend directory.
 
 ```sh
 npm ci

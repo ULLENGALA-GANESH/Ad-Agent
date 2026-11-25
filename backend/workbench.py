@@ -1,16 +1,17 @@
 """Local novelty detection for ordered numeric CSV data."""
 import csv
 import io
-from pathlib import Path
 
 import numpy as np
 from flask import Blueprint, jsonify, request
 from sklearn.ensemble import IsolationForest
 from sklearn.metrics import average_precision_score, confusion_matrix, roc_auc_score
 
+from project_paths import DATA_DIR
+
 workbench = Blueprint("workbench", __name__)
 MAX_BYTES = 2_000_000
-DEMO = Path(__file__).parent / "data" / "sensor-demo.csv"
+DEMO = DATA_DIR / "sensor-demo.csv"
 
 
 def analyze(stream, alert_rate):
