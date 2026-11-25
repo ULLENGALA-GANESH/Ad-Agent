@@ -1,0 +1,67 @@
+[
+  {
+    "id": "ec2-cpu",
+    "title": "EC2 CPU utilization",
+    "metric": "CPU utilization",
+    "path": "realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+    "source": "https://github.com/numenta/NAB/blob/master/data/realAWSCloudwatch/ec2_cpu_utilization_24ae8d.csv",
+    "blob": "9185706041f377320d8fa45cbfb8097ac64e322b",
+    "windows": [
+      [
+        "2014-02-26 13:45:00.000000",
+        "2014-02-27 06:25:00.000000"
+      ],
+      [
+        "2014-02-27 08:55:00.000000",
+        "2014-02-28 01:35:00.000000"
+      ]
+    ],
+    "label_blob": "2f1be355750a2fefa8d781215d3275fda3d83d23"
+  },
+  {
+    "id": "elb-requests",
+    "title": "ELB request count",
+    "metric": "Requests",
+    "path": "realAWSCloudwatch/elb_request_count_8c0756.csv",
+    "source": "https://github.com/numenta/NAB/blob/master/data/realAWSCloudwatch/elb_request_count_8c0756.csv",
+    "blob": "c2c83f9f470653d5db71f8aa6a038a98e075c7ae",
+    "windows": [
+      [
+        "2014-04-12 09:04:00.000000",
+        "2014-04-13 01:44:00.000000"
+      ],
+      [
+        "2014-04-22 11:14:00.000000",
+        "2014-04-23 03:54:00.000000"
+      ]
+    ],
+    "label_blob": "2f1be355750a2fefa8d781215d3275fda3d83d23"
+  },
+  {
+    "id": "exchange-cpm",
+    "title": "Exchange 4 CPM",
+    "metric": "CPM",
+    "path": "realAdExchange/exchange-4_cpm_results.csv",
+    "source": "https://github.com/numenta/NAB/blob/master/data/realAdExchange/exchange-4_cpm_results.csv",
+    "blob": "d4779f0765d9ee0537a95bbe56f316d2cd353648",
+    "windows": [
+      [
+        "2011-07-15 13:15:01.000000",
+        "2011-07-17 05:15:01.000000"
+      ],
+      [
+        "2011-07-31 11:15:01.000000",
+        "2011-08-02 05:15:01.000000"
+      ],
+      [
+        "2011-08-22 12:15:01.000000",
+        "2011-08-24 04:15:01.000000"
+      ],
+      [
+        "2011-08-27 17:15:01.000000",
+        "2011-08-29 09:15:01.000000"
+      ]
+    ],
+    "label_blob": "2f1be355750a2fefa8d781215d3275fda3d83d23"
+  }
+]

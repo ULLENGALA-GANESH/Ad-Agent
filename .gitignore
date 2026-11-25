@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 lib64/
 parts/
 sdist/
@@ -185,15 +185,8 @@ cache.json
 cache.json.lock
 head_train_data_loader.py
 head_test_data_loader.py
-
-# Frontend dependencies and builds
 node_modules/
-**/node_modules/
-dist/
-**/dist/
+*.tsbuildinfo
+data/jobs_store.json
+data/????????????????????????????????_*
 
-# Backend virtual environments
-backend/.venv/
-**/.venv/
-**/__pycache__/
-*.pyc
